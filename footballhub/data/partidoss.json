@@ -78,7 +78,7 @@
     "visitante": "Everton",
     "resultado": "1-0",
     "estado": "finalizado"
-  }
+  },
 
 { "jornada": 2, "fecha": "2025-08-22", "local": "West Ham", "visitante": "Chelsea", "resultado": "1-5", "estado": "finalizado" },
   { "jornada": 2, "fecha": "2025-08-23", "local": "Manchester City", "visitante": "Tottenham", "resultado": "0-2", "estado": "finalizado" },
@@ -90,7 +90,7 @@
   { "jornada": 2, "fecha": "2025-08-24", "local": "Everton", "visitante": "Brighton", "resultado": "2-0", "estado": "finalizado" },
   { "jornada": 2, "fecha": "2025-08-24", "local": "Fulham", "visitante": "Manchester United", "resultado": "1-1", "estado": "finalizado" },
   { "jornada": 2, "fecha": "2025-08-25", "local": "Newcastle", "visitante": "Liverpool", "resultado": "2-3", "estado": "finalizado" }
-  
+  ,
 { "jornada": 3, "fecha": "2025-08-30", "local": "Chelsea", "visitante": "Fulham", "resultado": "2-0", "estado": "finalizado" },
   { "jornada": 3, "fecha": "2025-08-30", "local": "Wolves", "visitante": "Everton", "resultado": "2-3", "estado": "finalizado" },
   { "jornada": 3, "fecha": "2025-08-30", "local": "Tottenham", "visitante": "Bournemouth", "resultado": "0-1", "estado": "finalizado" },
@@ -101,7 +101,7 @@
   { "jornada": 3, "fecha": "2025-08-31", "local": "Nottingham Forest", "visitante": "West Ham", "resultado": "0-3", "estado": "finalizado" },
   { "jornada": 3, "fecha": "2025-08-31", "local": "Liverpool", "visitante": "Arsenal", "resultado": "1-0", "estado": "finalizado" },
   { "jornada": 3, "fecha": "2025-08-31", "local": "Aston Villa", "visitante": "Crystal Palace", "resultado": "0-3", "estado": "finalizado" }
-
+,
 { "jornada": 4, "fecha": "2025-09-13", "local": "Arsenal", "visitante": "Nottingham Forest", "resultado": "3-0", "estado": "finalizado" },
   { "jornada": 4, "fecha": "2025-09-13", "local": "Bournemouth", "visitante": "Brighton", "resultado": "2-1", "estado": "finalizado" },
   { "jornada": 4, "fecha": "2025-09-13", "local": "Newcastle", "visitante": "Wolves", "resultado": "1-0", "estado": "finalizado" },
@@ -112,7 +112,7 @@
   { "jornada": 4, "fecha": "2025-09-13", "local": "Brentford", "visitante": "Chelsea", "resultado": "2-2", "estado": "finalizado" },
   { "jornada": 4, "fecha": "2025-09-14", "local": "Burnley", "visitante": "Liverpool", "resultado": "0-1", "estado": "finalizado" },
   { "jornada": 4, "fecha": "2025-09-14", "local": "Manchester City", "visitante": "Manchester United", "resultado": "3-0", "estado": "finalizado" }
-
+,
   { "jornada": 5, "fecha": "2025-09-20", "local": "Liverpool", "visitante": "Everton", "resultado": "2-1", "estado": "finalizado" },
   { "jornada": 5, "fecha": "2025-09-20", "local": "Burnley", "visitante": "Nottingham Forest", "resultado": "1-1", "estado": "finalizado" },
   { "jornada": 5, "fecha": "2025-09-20", "local": "Brighton", "visitante": "Tottenham", "resultado": "2-2", "estado": "finalizado" },
