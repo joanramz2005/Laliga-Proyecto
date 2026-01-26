@@ -1,0 +1,126 @@
+[
+  {
+    "jornada": 1,
+    "fecha": "2025-08-15",
+    "local": "Liverpool",
+    "visitante": "Bournemouth",
+    "resultado": "4-2",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-16",
+    "local": "Aston Villa",
+    "visitante": "Newcastle",
+    "resultado": "0-0",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-16",
+    "local": "Brighton",
+    "visitante": "Fulham",
+    "resultado": "1-1",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-16",
+    "local": "Sunderland AFC",
+    "visitante": "West Ham",
+    "resultado": "3-0",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-16",
+    "local": "Tottenham",
+    "visitante": "Burnley",
+    "resultado": "3-0",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-16",
+    "local": "Wolves",
+    "visitante": "Manchester City",
+    "resultado": "0-4",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-17",
+    "local": "Chelsea",
+    "visitante": "Crystal Palace",
+    "resultado": "0-0",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-17",
+    "local": "Nottingham Forest",
+    "visitante": "Brentford",
+    "resultado": "3-1",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-17",
+    "local": "Manchester United",
+    "visitante": "Arsenal",
+    "resultado": "0-1",
+    "estado": "finalizado"
+  },
+  {
+    "jornada": 1,
+    "fecha": "2025-08-18",
+    "local": "Leeds",
+    "visitante": "Everton",
+    "resultado": "1-0",
+    "estado": "finalizado"
+  }
+
+{ "jornada": 2, "fecha": "2025-08-22", "local": "West Ham", "visitante": "Chelsea", "resultado": "1-5", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-23", "local": "Manchester City", "visitante": "Tottenham", "resultado": "0-2", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-23", "local": "Bournemouth", "visitante": "Wolves", "resultado": "1-0", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-23", "local": "Burnley", "visitante": "Sunderland AFC", "resultado": "2-0", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-23", "local": "Brentford", "visitante": "Aston Villa", "resultado": "1-0", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-23", "local": "Arsenal", "visitante": "Leeds", "resultado": "5-0", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-24", "local": "Crystal Palace", "visitante": "Nottingham Forest", "resultado": "1-1", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-24", "local": "Everton", "visitante": "Brighton", "resultado": "2-0", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-24", "local": "Fulham", "visitante": "Manchester United", "resultado": "1-1", "estado": "finalizado" },
+  { "jornada": 2, "fecha": "2025-08-25", "local": "Newcastle", "visitante": "Liverpool", "resultado": "2-3", "estado": "finalizado" }
+  
+{ "jornada": 3, "fecha": "2025-08-30", "local": "Chelsea", "visitante": "Fulham", "resultado": "2-0", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-30", "local": "Wolves", "visitante": "Everton", "resultado": "2-3", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-30", "local": "Tottenham", "visitante": "Bournemouth", "resultado": "0-1", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-30", "local": "Manchester United", "visitante": "Burnley", "resultado": "3-2", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-30", "local": "Sunderland AFC", "visitante": "Brentford", "resultado": "2-1", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-30", "local": "Leeds", "visitante": "Newcastle", "resultado": "0-0", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-31", "local": "Brighton", "visitante": "Manchester City", "resultado": "2-1", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-31", "local": "Nottingham Forest", "visitante": "West Ham", "resultado": "0-3", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-31", "local": "Liverpool", "visitante": "Arsenal", "resultado": "1-0", "estado": "finalizado" },
+  { "jornada": 3, "fecha": "2025-08-31", "local": "Aston Villa", "visitante": "Crystal Palace", "resultado": "0-3", "estado": "finalizado" }
+
+{ "jornada": 4, "fecha": "2025-09-13", "local": "Arsenal", "visitante": "Nottingham Forest", "resultado": "3-0", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "Bournemouth", "visitante": "Brighton", "resultado": "2-1", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "Newcastle", "visitante": "Wolves", "resultado": "1-0", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "Everton", "visitante": "Aston Villa", "resultado": "0-0", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "Crystal Palace", "visitante": "Sunderland AFC", "resultado": "0-0", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "Fulham", "visitante": "Leeds", "resultado": "1-0", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "West Ham", "visitante": "Tottenham", "resultado": "0-3", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-13", "local": "Brentford", "visitante": "Chelsea", "resultado": "2-2", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-14", "local": "Burnley", "visitante": "Liverpool", "resultado": "0-1", "estado": "finalizado" },
+  { "jornada": 4, "fecha": "2025-09-14", "local": "Manchester City", "visitante": "Manchester United", "resultado": "3-0", "estado": "finalizado" }
+
+  { "jornada": 5, "fecha": "2025-09-20", "local": "Liverpool", "visitante": "Everton", "resultado": "2-1", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-20", "local": "Burnley", "visitante": "Nottingham Forest", "resultado": "1-1", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-20", "local": "Brighton", "visitante": "Tottenham", "resultado": "2-2", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-20", "local": "West Ham", "visitante": "Crystal Palace", "resultado": "1-2", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-20", "local": "Wolves", "visitante": "Leeds", "resultado": "1-3", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-20", "local": "Manchester United", "visitante": "Chelsea", "resultado": "2-1", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-20", "local": "Fulham", "visitante": "Brentford", "resultado": "3-1", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-21", "local": "Sunderland AFC", "visitante": "Aston Villa", "resultado": "1-1", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-21", "local": "Bournemouth", "visitante": "Newcastle", "resultado": "0-0", "estado": "finalizado" },
+  { "jornada": 5, "fecha": "2025-09-21", "local": "Arsenal", "visitante": "Manchester City", "resultado": "1-1", "estado": "finalizado" }
+]

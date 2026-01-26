@@ -1,0 +1,22 @@
+[
+  { "posicion": 1, "equipo": "Arsenal", "pj": 23, "pg": 15, "pe": 5, "pp": 3, "puntos": 50 },
+  { "posicion": 2, "equipo": "Manchester City", "pj": 23, "pg": 14, "pe": 4, "pp": 5, "puntos": 46 },
+  { "posicion": 3, "equipo": "Aston Villa", "pj": 23, "pg": 14, "pe": 4, "pp": 5, "puntos": 46 },
+  { "posicion": 4, "equipo": "Manchester United", "pj": 23, "pg": 10, "pe": 8, "pp": 5, "puntos": 38 },
+  { "posicion": 5, "equipo": "Chelsea", "pj": 23, "pg": 10, "pe": 7, "pp": 6, "puntos": 37 },
+  { "posicion": 6, "equipo": "Liverpool", "pj": 23, "pg": 10, "pe": 6, "pp": 7, "puntos": 36 },
+  { "posicion": 7, "equipo": "Fulham", "pj": 23, "pg": 10, "pe": 4, "pp": 9, "puntos": 34 },
+  { "posicion": 8, "equipo": "Brentford", "pj": 23, "pg": 10, "pe": 3, "pp": 10, "puntos": 33 },
+  { "posicion": 9, "equipo": "Newcastle", "pj": 23, "pg": 9, "pe": 6, "pp": 8, "puntos": 33 },
+  { "posicion": 10, "equipo": "Sunderland AFC", "pj": 23, "pg": 8, "pe": 9, "pp": 6, "puntos": 33 },
+  { "posicion": 11, "equipo": "Everton", "pj": 22, "pg": 9, "pe": 5, "pp": 8, "puntos": 32 },
+  { "posicion": 12, "equipo": "Brighton", "pj": 23, "pg": 7, "pe": 9, "pp": 7, "puntos": 30 },
+  { "posicion": 13, "equipo": "Bournemouth", "pj": 23, "pg": 7, "pe": 9, "pp": 7, "puntos": 30 },
+  { "posicion": 14, "equipo": "Tottenham", "pj": 23, "pg": 7, "pe": 7, "pp": 9, "puntos": 28 },
+  { "posicion": 15, "equipo": "Crystal Palace", "pj": 23, "pg": 7, "pe": 7, "pp": 9, "puntos": 28 },
+  { "posicion": 16, "equipo": "Leeds", "pj": 22, "pg": 6, "pe": 7, "pp": 9, "puntos": 25 },
+  { "posicion": 17, "equipo": "Nottingham Forest", "pj": 23, "pg": 7, "pe": 4, "pp": 12, "puntos": 25 },
+  { "posicion": 18, "equipo": "West Ham", "pj": 23, "pg": 5, "pe": 5, "pp": 13, "puntos": 20 },
+  { "posicion": 19, "equipo": "Burnley", "pj": 23, "pg": 3, "pe": 6, "pp": 14, "puntos": 15 },
+  { "posicion": 20, "equipo": "Wolves", "pj": 23, "pg": 1, "pe": 5, "pp": 17, "puntos": 8 }
+]

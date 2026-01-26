@@ -1,0 +1,22 @@
+[
+  { "id": 1, "nombre": "Arsenal FC", "ciudad": "Londres", "estadio": "Emirates Stadium", "entrenador": "Mikel Arteta" },
+  { "id": 2, "nombre": "Aston Villa", "ciudad": "Birmingham", "estadio": "Villa Park", "entrenador": "Unai Emery" },
+  { "id": 3, "nombre": "Bournemouth", "ciudad": "Bournemouth", "estadio": "Vitality Stadium", "entrenador": "Andoni Iraola" },
+  { "id": 4, "nombre": "Brentford FC", "ciudad": "Londres", "estadio": "Gtech Community Stadium", "entrenador": "Keith Andrews" },
+  { "id": 5, "nombre": "Brighton & Hove Albion", "ciudad": "Brighton", "estadio": "American Express Stadium", "entrenador": "Fabian Hürzeler" },
+  { "id": 6, "nombre": "Burnley FC", "ciudad": "Burnley", "estadio": "Turf Moor", "entrenador": "Scott Parker" },
+  { "id": 7, "nombre": "Chelsea FC", "ciudad": "Londres", "estadio": "Stamford Bridge", "entrenador": "Liam Rosenior" },
+  { "id": 8, "nombre": "Crystal Palace", "ciudad": "Londres", "estadio": "Selhurst Park", "entrenador": "Oliver Glasner" },
+  { "id": 9, "nombre": "Everton FC", "ciudad": "Liverpool", "estadio": "Everton Stadium", "entrenador": "David Moyes" },
+  { "id": 10, "nombre": "Fulham FC", "ciudad": "Londres", "estadio": "Craven Cottage", "entrenador": "Marco Silva" },
+  { "id": 11, "nombre": "Leeds United", "ciudad": "Leeds", "estadio": "Elland Road", "entrenador": "Daniel Farke" },
+  { "id": 12, "nombre": "Liverpool FC", "ciudad": "Liverpool", "estadio": "Anfield", "entrenador": "Arne Slot" },
+  { "id": 13, "nombre": "Manchester City", "ciudad": "Manchester", "estadio": "Etihad Stadium", "entrenador": "Pep Guardiola" },
+  { "id": 14, "nombre": "Manchester United", "ciudad": "Manchester", "estadio": "Old Trafford", "entrenador": "Michael Carrick" },
+  { "id": 15, "nombre": "Newcastle United", "ciudad": "Newcastle", "estadio": "St. James' Park", "entrenador": "Eddie Howe" },
+  { "id": 16, "nombre": "Nottingham Forest", "ciudad": "Nottingham", "estadio": "City Ground", "entrenador": "Sean Dyche" },
+  { "id": 17, "nombre": "Sunderland AFC", "ciudad": "Sunderland", "estadio": "Stadium of Light", "entrenador": "Régis Le Bris" },
+  { "id": 18, "nombre": "Tottenham Hotspur", "ciudad": "Londres", "estadio": "Tottenham Hotspur Stadium", "entrenador": "Thomas Frank" },
+  { "id": 19, "nombre": "West Ham United", "ciudad": "Londres", "estadio": "London Stadium", "entrenador": "Nuno Espírito Santo" },
+  { "id": 20, "nombre": "Wolverhampton Wanderers", "ciudad": "Wolverhampton", "estadio": "Molineux Stadium", "entrenador": "Rob Edwards" }
+]
