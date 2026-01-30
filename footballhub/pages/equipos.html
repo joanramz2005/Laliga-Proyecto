@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equipos - FootballHub</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/equipos.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html">
+                <img src="../logo.png" width="170" height="65" alt="FootballHub">
+            </a>
+        </div>
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="equipos.html" class="active">Equipos</a>
+            <a href="tabla.html">Tabla</a>
+            <a href="partidos.html">Partidos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- HERO BANNER -->
+    <section class="page-hero">
+        <div class="hero-content">
+            <h1>Equipos de la Premier League</h1>
+            <p>Conoce todos los clubes, sus estadios, jugadores y estadísticas de la temporada 2023/2024</p>
+        </div>
+    </section>
+
+    <!-- FILTROS -->
+    <section class="filters-section">
+        <div class="container">
+            <div class="search-container">
+                <input type="text" id="team-search" placeholder="Buscar equipo por nombre..." class="search-input">
+                <button class="search-btn" aria-label="Buscar">
+                    <span>🔍</span>
+                </button>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="top6">Top 6</button>
+                <button class="filter-btn" data-filter="mid-table">Media Tabla</button>
+                <button class="filter-btn" data-filter="relegation">Zona Descenso</button>
+                <button class="filter-btn" data-filter="europe">Competiciones UEFA</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- LISTA DE EQUIPOS EN HTML -->
+    <main class="teams-main">
+        <div class="container">
+            <div class="teams-grid" id="teams-container">
+                
+                <!-- Arsenal -->
+                <div class="team-card" data-team-id="1" data-position="2" data-status="champions-league" data-points="84">
+                    <div class="team-header" style="background: #EF0107">
+                        <div class="team-position">2</div>
+                        <div class="team-badge badge-champions-league">UCL</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder"><img src="Arsenal_F.C.-Logo.wine.png" width="180px" height="100px"></div>
+                        </div>
+                        <h3 class="team-name">Arsenal</h3>
+                        <p class="team-stadium">Emirates Stadium</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">84</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+45</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="1">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Manchester City -->
+                <div class="team-card" data-team-id="2" data-position="1" data-status="champions-league" data-points="91">
+                    <div class="team-header" style="background: #6CABDD">
+                        <div class="team-position">1</div>
+                        <div class="team-badge badge-champions-league">UCL</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder"><img src="Manchester_City_FC_badge.svg.png" width="130px" height="130px"></div>
+                        </div>
+                        <h3 class="team-name">Manchester City</h3>
+                        <p class="team-stadium">Etihad Stadium</p>
+                        <p class="team-city">Mánchester</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">91</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+62</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="2">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Liverpool -->
+                <div class="team-card" data-team-id="3" data-position="3" data-status="champions-league" data-points="82">
+                    <div class="team-header" style="background: #C8102E">
+                        <div class="team-position">3</div>
+                        <div class="team-badge badge-champions-league">UCL</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">L</div>
+                        </div>
+                        <h3 class="team-name">Liverpool</h3>
+                        <p class="team-stadium">Anfield</p>
+                        <p class="team-city">Liverpool</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">82</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+45</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="3">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Aston Villa -->
+                <div class="team-card" data-team-id="4" data-position="4" data-status="champions-league" data-points="68">
+                    <div class="team-header" style="background: #95BFE5">
+                        <div class="team-position">4</div>
+                        <div class="team-badge badge-champions-league">UCL</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">V</div>
+                        </div>
+                        <h3 class="team-name">Aston Villa</h3>
+                        <p class="team-stadium">Villa Park</p>
+                        <p class="team-city">Birmingham</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">68</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+15</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="4">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tottenham -->
+                <div class="team-card" data-team-id="5" data-position="5" data-status="europa" data-points="66">
+                    <div class="team-header" style="background: #132257">
+                        <div class="team-position">5</div>
+                        <div class="team-badge badge-europa">UEL</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">T</div>
+                        </div>
+                        <h3 class="team-name">Tottenham Hotspur</h3>
+                        <p class="team-stadium">Tottenham Hotspur Stadium</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">66</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+13</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="5">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chelsea -->
+                <div class="team-card" data-team-id="6" data-position="6" data-status="europa" data-points="63">
+                    <div class="team-header" style="background: #034694">
+                        <div class="team-position">6</div>
+                        <div class="team-badge badge-europa">UEL</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">C</div>
+                        </div>
+                        <h3 class="team-name">Chelsea</h3>
+                        <p class="team-stadium">Stamford Bridge</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">63</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+14</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="6">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Newcastle -->
+                <div class="team-card" data-team-id="7" data-position="7" data-status="mid-table" data-points="60">
+                    <div class="team-header" style="background: #241F20">
+                        <div class="team-position">7</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">N</div>
+                        </div>
+                        <h3 class="team-name">Newcastle United</h3>
+                        <p class="team-stadium">St James' Park</p>
+                        <p class="team-city">Newcastle</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">60</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">+23</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="7">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Manchester United -->
+                <div class="team-card" data-team-id="8" data-position="8" data-status="mid-table" data-points="60">
+                    <div class="team-header" style="background: #DA291C">
+                        <div class="team-position">8</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">U</div>
+                        </div>
+                        <h3 class="team-name">Manchester United</h3>
+                        <p class="team-stadium">Old Trafford</p>
+                        <p class="team-city">Mánchester</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">60</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-1</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="8">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- West Ham -->
+                <div class="team-card" data-team-id="9" data-position="9" data-status="mid-table" data-points="52">
+                    <div class="team-header" style="background: #7A263A">
+                        <div class="team-position">9</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">W</div>
+                        </div>
+                        <h3 class="team-name">West Ham United</h3>
+                        <p class="team-stadium">London Stadium</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">52</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-14</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="9">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Crystal Palace -->
+                <div class="team-card" data-team-id="10" data-position="10" data-status="mid-table" data-points="49">
+                    <div class="team-header" style="background: #1B458F">
+                        <div class="team-position">10</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">C</div>
+                        </div>
+                        <h3 class="team-name">Crystal Palace</h3>
+                        <p class="team-stadium">Selhurst Park</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">49</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-1</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="10">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brighton -->
+                <div class="team-card" data-team-id="11" data-position="11" data-status="mid-table" data-points="48">
+                    <div class="team-header" style="background: #0057B8">
+                        <div class="team-position">11</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">B</div>
+                        </div>
+                        <h3 class="team-name">Brighton & Hove Albion</h3>
+                        <p class="team-stadium">Amex Stadium</p>
+                        <p class="team-city">Brighton</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">48</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-7</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="11">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bournemouth -->
+                <div class="team-card" data-team-id="12" data-position="12" data-status="mid-table" data-points="48">
+                    <div class="team-header" style="background: #DA291C">
+                        <div class="team-position">12</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">B</div>
+                        </div>
+                        <h3 class="team-name">Bournemouth</h3>
+                        <p class="team-stadium">Vitality Stadium</p>
+                        <p class="team-city">Bournemouth</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">48</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-13</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="12">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Fulham -->
+                <div class="team-card" data-team-id="13" data-position="13" data-status="mid-table" data-points="47">
+                    <div class="team-header" style="background: #000000">
+                        <div class="team-position">13</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">F</div>
+                        </div>
+                        <h3 class="team-name">Fulham</h3>
+                        <p class="team-stadium">Craven Cottage</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">47</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-6</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="13">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Wolves -->
+                <div class="team-card" data-team-id="14" data-position="14" data-status="mid-table" data-points="46">
+                    <div class="team-header" style="background: #FDB913">
+                        <div class="team-position">14</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">W</div>
+                        </div>
+                        <h3 class="team-name">Wolverhampton Wanderers</h3>
+                        <p class="team-stadium">Molineux Stadium</p>
+                        <p class="team-city">Wolverhampton</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">46</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-15</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="14">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Everton -->
+                <div class="team-card" data-team-id="15" data-position="15" data-status="mid-table" data-points="40">
+                    <div class="team-header" style="background: #003399">
+                        <div class="team-position">15</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">E</div>
+                        </div>
+                        <h3 class="team-name">Everton</h3>
+                        <p class="team-stadium">Goodison Park</p>
+                        <p class="team-city">Liverpool</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">40</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-11</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="15">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brentford -->
+                <div class="team-card" data-team-id="16" data-position="16" data-status="mid-table" data-points="39">
+                    <div class="team-header" style="background: #E30613">
+                        <div class="team-position">16</div>
+                        <div class="team-badge badge-mid-table">MEDIA</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">B</div>
+                        </div>
+                        <h3 class="team-name">Brentford</h3>
+                        <p class="team-stadium">Gtech Community Stadium</p>
+                        <p class="team-city">Londres</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">39</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-9</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="16">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Nottingham Forest -->
+                <div class="team-card" data-team-id="17" data-position="17" data-status="relegation" data-points="32">
+                    <div class="team-header" style="background: #DD0000">
+                        <div class="team-position">17</div>
+                        <div class="team-badge badge-relegation">DESC</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">N</div>
+                        </div>
+                        <h3 class="team-name">Nottingham Forest</h3>
+                        <p class="team-stadium">City Ground</p>
+                        <p class="team-city">Nottingham</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">32</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-18</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="17">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Luton Town -->
+                <div class="team-card" data-team-id="18" data-position="18" data-status="relegation" data-points="26">
+                    <div class="team-header" style="background: #FF6B08">
+                        <div class="team-position">18</div>
+                        <div class="team-badge badge-relegation">DESC</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">L</div>
+                        </div>
+                        <h3 class="team-name">Luton Town</h3>
+                        <p class="team-stadium">Kenilworth Road</p>
+                        <p class="team-city">Luton</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">26</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-33</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="18">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Burnley -->
+                <div class="team-card" data-team-id="19" data-position="19" data-status="relegation" data-points="24">
+                    <div class="team-header" style="background: #6C1D45">
+                        <div class="team-position">19</div>
+                        <div class="team-badge badge-relegation">DESC</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">B</div>
+                        </div>
+                        <h3 class="team-name">Burnley</h3>
+                        <p class="team-stadium">Turf Moor</p>
+                        <p class="team-city">Burnley</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">24</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-37</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="19">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Sheffield United -->
+                <div class="team-card" data-team-id="20" data-position="20" data-status="relegation" data-points="16">
+                    <div class="team-header" style="background: #EE2737">
+                        <div class="team-position">20</div>
+                        <div class="team-badge badge-relegation">DESC</div>
+                        <div class="team-logo">
+                            <div class="team-logo-placeholder">S</div>
+                        </div>
+                        <h3 class="team-name">Sheffield United</h3>
+                        <p class="team-stadium">Bramall Lane</p>
+                        <p class="team-city">Sheffield</p>
+                    </div>
+                    <div class="team-body">
+                        <div class="team-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">16</span>
+                                <span class="stat-label">PTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">38</span>
+                                <span class="stat-label">PJ</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">-69</span>
+                                <span class="stat-label">GD</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-footer">
+                        <button class="view-details-btn" data-team-id="20">
+                            Ver Detalles
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- MENSAJE CUANDO NO HAY RESULTADOS -->
+            <div id="no-results" class="no-results" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>No se encontraron equipos</h3>
+                <p>Intenta con otro término de búsqueda o ajusta los filtros</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- ESTADÍSTICAS -->
+    <section class="stats-overview">
+        <div class="container">
+            <h2>Estadísticas de la Temporada</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⚽</div>
+                    <h3>Total Goles</h3>
+                    <p class="stat-number">1,078</p>
+                    <p class="stat-desc">Goles marcados</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <h3>Jugadores</h3>
+                    <p class="stat-number">560</p>
+                    <p class="stat-desc">Jugadores registrados</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎯</div>
+                    <h3>Asistencias</h3>
+                    <p class="stat-number">786</p>
+                    <p class="stat-desc">Asistencias totales</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🟥</div>
+                    <h3>Tarjetas</h3>
+                    <p class="stat-number">1,234</p>
+                    <p class="stat-desc">Tarjetas amarillas/rojas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="../logo.png" width="140" height="50" alt="FootballHub">
+                </div>
+                <div class="footer-links">
+                    <a href="../index.html">Inicio</a>
+                    <a href="equipos.html">Equipos</a>
+                    <a href="tabla.html">Tabla</a>
+                    <a href="partidos.html">Partidos</a>
+                    <a href="contacto.html">Contacto</a>
+                </div>
+                <p class="copyright">© 2026 FootballHub · Proyecto educativo</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL PARA DETALLES -->
+    <div id="team-modal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body" id="modal-body">
+                <!-- Contenido dinámico -->
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="../js/equipos.js"></script>
+</body>
+</html>
