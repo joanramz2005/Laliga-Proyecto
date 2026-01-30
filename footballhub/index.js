@@ -29,62 +29,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
 /*DESTACADO*/
 
-// Agregar este código en tu archivo index.js o en un nuevo archivo
+// Agregar este código en tu archivo index.js
 
-class Carousel {
+class RotatingCarousel {
     constructor() {
         this.carouselTrack = document.querySelector('.carousel-track');
         this.carouselDots = document.querySelector('.carousel-dots');
         this.prevBtn = document.querySelector('.prev-btn');
         this.nextBtn = document.querySelector('.next-btn');
-        this.cardsData = this.getCardsData();
+        this.currentPosition = document.querySelector('.current-position');
+        this.totalSlides = document.querySelector('.total-slides');
+        
+        this.cards = Array.from(document.querySelectorAll('.carousel-card'));
         this.currentIndex = 0;
         this.cardsPerView = this.calculateCardsPerView();
+        this.totalSlidesCount = 0;
         this.autoRotateInterval = null;
-        this.autoRotateDelay = 4000; // 4 segundos
+        this.autoRotateDelay = 5000; // 5 segundos
         
         this.init();
-    }
-    
-    getCardsData() {
-        return [
-            {
-                icon: "⚽",
-                title: "Goleadores Líderes",
-                description: "Consulta los máximos anotadores de la temporada y sus estadísticas.",
-                color: "#0b1c3d"
-            },
-            {
-                icon: "📊",
-                title: "Estadísticas",
-                description: "Clasificaciones, goles y rendimiento por equipo.",
-                color: "#1e4fa1"
-            },
-            {
-                icon: "🔥",
-                title: "Últimos Partidos",
-                description: "Marcadores y fechas recientes en tiempo real.",
-                color: "#f5c400"
-            },
-            {
-                icon: "⭐",
-                title: "Jugador del Mes",
-                description: "Descubre al jugador destacado del mes en la Premier League.",
-                color: "#2ecc71"
-            },
-            {
-                icon: "🏆",
-                title: "Próximos Encuentros",
-                description: "No te pierdas los partidos más esperados de la semana.",
-                color: "#e74c3c"
-            },
-            {
-                icon: "📈",
-                title: "Equipos en Ascenso",
-                description: "Conoce los equipos que mejoran su posición en la tabla.",
-                color: "#9b59b6"
-            }
-        ];
     }
     
     calculateCardsPerView() {
@@ -95,7 +58,7 @@ class Carousel {
     }
     
     init() {
-        this.renderCards();
+        this.updateTotalSlides();
         this.renderDots();
         this.setupEventListeners();
         this.startAutoRotate();
@@ -104,52 +67,40 @@ class Carousel {
         // Recalcular en redimensionamiento
         window.addEventListener('resize', () => {
             this.cardsPerView = this.calculateCardsPerView();
+            this.updateTotalSlides();
+            this.renderDots();
             this.updateCarousel();
         });
     }
     
-    renderCards() {
-        this.carouselTrack.innerHTML = '';
-        
-        this.cardsData.forEach((card, index) => {
-            const cardElement = document.createElement('article');
-            cardElement.className = 'carousel-card';
-            cardElement.dataset.index = index;
-            
-            cardElement.innerHTML = `
-                <div class="card-icon">${card.icon}</div>
-                <h3>${card.title}</h3>
-                <p>${card.description}</p>
-                <div class="card-footer">
-                    <span class="card-badge">Destacado</span>
-                </div>
-            `;
-            
-            this.carouselTrack.appendChild(cardElement);
-        });
+    updateTotalSlides() {
+        this.totalSlidesCount = Math.ceil(this.cards.length / this.cardsPerView);
+        if (this.totalSlides) {
+            this.totalSlides.textContent = this.totalSlidesCount;
+        }
     }
     
     renderDots() {
         this.carouselDots.innerHTML = '';
-        const totalSlides = Math.ceil(this.cardsData.length / this.cardsPerView);
         
-        for (let i = 0; i < totalSlides; i++) {
+        for (let i = 0; i < this.totalSlidesCount; i++) {
             const dot = document.createElement('button');
             dot.className = `carousel-dot ${i === 0 ? 'active' : ''}`;
             dot.dataset.slide = i;
+            dot.setAttribute('aria-label', `Ir al slide ${i + 1}`);
             dot.addEventListener('click', () => this.goToSlide(i));
             this.carouselDots.appendChild(dot);
         }
     }
     
     updateCarousel() {
-        const cardWidth = this.carouselTrack.querySelector('.carousel-card').offsetWidth;
+        const cardWidth = this.cards[0]?.offsetWidth || 300;
         const gap = 24; // 1.5rem en px
         const translateX = -(this.currentIndex * (cardWidth + gap) * this.cardsPerView);
         this.carouselTrack.style.transform = `translateX(${translateX}px)`;
         
         // Actualizar botones
-        const maxIndex = Math.ceil(this.cardsData.length / this.cardsPerView) - 1;
+        const maxIndex = this.totalSlidesCount - 1;
         this.prevBtn.disabled = this.currentIndex === 0;
         this.nextBtn.disabled = this.currentIndex === maxIndex;
         
@@ -159,23 +110,31 @@ class Carousel {
             dot.classList.toggle('active', index === this.currentIndex);
         });
         
-        // Resaltar carta central
-        this.highlightCenterCard();
+        // Actualizar posición
+        if (this.currentPosition) {
+            this.currentPosition.textContent = this.currentIndex + 1;
+        }
+        
+        // Agregar animación a las cards visibles
+        this.animateVisibleCards();
     }
     
-    highlightCenterCard() {
-        const cards = document.querySelectorAll('.carousel-card');
-        cards.forEach(card => card.classList.remove('highlighted'));
+    animateVisibleCards() {
+        // Remover animación anterior
+        this.cards.forEach(card => card.classList.remove('active-card'));
         
-        const centerIndex = this.currentIndex * this.cardsPerView + Math.floor(this.cardsPerView / 2);
-        if (cards[centerIndex]) {
-            cards[centerIndex].classList.add('highlighted');
-        }
+        // Calcular índices de cards visibles
+        const startIndex = this.currentIndex * this.cardsPerView;
+        const endIndex = startIndex + this.cardsPerView;
+        
+        // Aplicar animación a cards visibles
+        this.cards.slice(startIndex, endIndex).forEach(card => {
+            card.classList.add('active-card');
+        });
     }
     
     goToSlide(index) {
-        const maxIndex = Math.ceil(this.cardsData.length / this.cardsPerView) - 1;
-        if (index < 0 || index > maxIndex) return;
+        if (index < 0 || index >= this.totalSlidesCount) return;
         
         this.currentIndex = index;
         this.updateCarousel();
@@ -183,41 +142,41 @@ class Carousel {
     }
     
     nextSlide() {
-        const maxIndex = Math.ceil(this.cardsData.length / this.cardsPerView) - 1;
-        if (this.currentIndex < maxIndex) {
+        if (this.currentIndex < this.totalSlidesCount - 1) {
             this.currentIndex++;
-            this.updateCarousel();
         } else {
             this.currentIndex = 0; // Volver al inicio
-            this.updateCarousel();
         }
+        this.updateCarousel();
         this.resetAutoRotate();
     }
     
     prevSlide() {
-        const maxIndex = Math.ceil(this.cardsData.length / this.cardsPerView) - 1;
         if (this.currentIndex > 0) {
             this.currentIndex--;
-            this.updateCarousel();
         } else {
-            this.currentIndex = maxIndex; // Ir al final
-            this.updateCarousel();
+            this.currentIndex = this.totalSlidesCount - 1; // Ir al final
         }
+        this.updateCarousel();
         this.resetAutoRotate();
     }
     
     startAutoRotate() {
+        if (this.autoRotateInterval) {
+            clearInterval(this.autoRotateInterval);
+        }
+        
         this.autoRotateInterval = setInterval(() => {
             this.nextSlide();
         }, this.autoRotateDelay);
     }
     
     resetAutoRotate() {
-        clearInterval(this.autoRotateInterval);
         this.startAutoRotate();
     }
     
     setupEventListeners() {
+        // Controles de navegación
         this.prevBtn.addEventListener('click', () => this.prevSlide());
         this.nextBtn.addEventListener('click', () => this.nextSlide());
         
@@ -230,33 +189,43 @@ class Carousel {
             this.startAutoRotate();
         });
         
-        // Swipe en móviles
+        // Swipe para móviles
+        this.setupSwipe();
+        
+        // Click en cards
+        this.cards.forEach(card => {
+            card.addEventListener('click', () => {
+                const cardId = card.dataset.cardId;
+                this.handleCardClick(cardId);
+            });
+        });
+        
+        // Teclado
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') this.prevSlide();
+            if (e.key === 'ArrowRight') this.nextSlide();
+        });
+    }
+    
+    setupSwipe() {
         let touchStartX = 0;
         let touchEndX = 0;
         
         this.carouselTrack.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
             clearInterval(this.autoRotateInterval);
-        });
+        }, { passive: true });
         
         this.carouselTrack.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
-            this.handleSwipe();
+            this.handleSwipeGesture(touchStartX, touchEndX);
             this.startAutoRotate();
-        });
-        
-        // Click en cards
-        this.carouselTrack.addEventListener('click', (e) => {
-            const card = e.target.closest('.carousel-card');
-            if (card) {
-                this.handleCardClick(card.dataset.index);
-            }
-        });
+        }, { passive: true });
     }
     
-    handleSwipe() {
+    handleSwipeGesture(startX, endX) {
         const minSwipeDistance = 50;
-        const distance = touchStartX - touchEndX;
+        const distance = startX - endX;
         
         if (Math.abs(distance) < minSwipeDistance) return;
         
@@ -267,14 +236,53 @@ class Carousel {
         }
     }
     
-    handleCardClick(index) {
-        // Aquí puedes agregar lo que quieras que pase al hacer clic en una card
-        console.log(`Card ${index} clickeada`);
-        // Ejemplo: window.location.href = `/detalles/${index}`;
+    handleCardClick(cardId) {
+        // Aquí puedes redirigir o mostrar más información
+        console.log(`Card ${cardId} clickeada`);
+        
+        // Ejemplo: Mostrar mensaje según la card
+        const messages = {
+            '1': 'Redirigiendo a Goleadores...',
+            '2': 'Redirigiendo a Estadísticas...',
+            '3': 'Redirigiendo a Partidos...',
+            '4': 'Redirigiendo a Jugador del Mes...',
+            '5': 'Redirigiendo a Calendario...',
+            '6': 'Redirigiendo a Equipos en Ascenso...'
+        };
+        
+        alert(messages[cardId] || 'Más información disponible próximamente');
+        
+        // O redirigir a una página específica
+        // window.location.href = `/destacados/${cardId}`;
     }
 }
 
-// Inicializar carrusel cuando el DOM esté listo
+// Inicializar cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
-    new Carousel();
+    // Inicializar carrusel
+    new RotatingCarousel();
+    
+    // También mantener tu código existente del header si lo necesitas
+    let lastScroll = 0;
+    const header = document.querySelector(".header");
+
+    if (header) {
+        window.addEventListener("scroll", () => {
+            const currentScroll = window.scrollY;
+
+            if (currentScroll <= 0) {
+                header.classList.remove("hide");
+                lastScroll = 0;
+                return;
+            }
+
+            if (currentScroll > lastScroll) {
+                header.classList.add("hide");
+            } else {
+                header.classList.remove("hide");
+            }
+
+            lastScroll = currentScroll;
+        });
+    }
 });
