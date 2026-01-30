@@ -17,7 +17,7 @@
 }
 
 body {
-    background-color: var(--background-color);
+    background: rgba(11, 28, 61, 0.9);
     color: var(--text-dark);
 }
 
@@ -28,10 +28,15 @@ body {
     align-items: center;
     padding: 1.2rem 2.5rem;
     background: rgba(11, 28, 61, 0.9);
-    position: absolute;
+    position: fixed;
     width: 100%;
     top: 0;
     z-index: 10;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+.header.hide {
+    transform: translateY(-100%);
 }
 
 .logo {
