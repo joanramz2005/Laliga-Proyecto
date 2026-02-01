@@ -41,7 +41,6 @@ body {
     top: 0;
     z-index: 10;
     transition: transform 0.3s ease, background-color 0.3s ease;
-
 }
 .header.hide {
     transform: translateY(-100%);
@@ -64,7 +63,9 @@ body {
 .nav a.active,
 .nav a:hover {
     color: var(--accent-color);
-}/* ===================== HERO ===================== */
+}
+
+/* ===================== HERO ===================== */
 .page-hero {
     background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--text-light);
@@ -235,22 +236,11 @@ body {
     color: white;
     position: relative;
     flex-shrink: 0;
-}
-
-.team-position {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background: rgba(255,255,255,0.2);
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    min-height: 280px;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    font-weight: bold;
-    font-size: 1rem;
-    backdrop-filter: blur(5px);
+    align-items: center;
 }
 
 .team-badge {
@@ -286,9 +276,9 @@ body {
 }
 
 .team-logo {
-    width: 100px;
-    height: 100px;
-    margin: 10px auto 15px;
+    width: 120px;
+    height: 120px;
+    margin: 15px auto;
     background: white;
     border-radius: 50%;
     display: flex;
@@ -299,11 +289,10 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.team-logo-placeholder {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-    opacity: 0.8;
+.team-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .team-name {
@@ -325,41 +314,8 @@ body {
     font-style: italic;
 }
 
-.team-body {
-    padding: 20px;
-    flex-grow: 1;
-}
-
-.team-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    text-align: center;
-}
-
-.stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.stat-value {
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: var(--primary-color);
-    margin-bottom: 2px;
-}
-
-.stat-label {
-    font-size: 0.8rem;
-    color: var(--gray-medium);
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 .team-footer {
-    padding: 15px 20px;
+    padding: 20px;
     background: var(--background-color);
     border-top: 1px solid var(--gray-light);
     text-align: center;
@@ -370,7 +326,7 @@ body {
     background: var(--accent-color);
     color: var(--primary-color);
     border: none;
-    padding: 10px 25px;
+    padding: 12px 25px;
     border-radius: 25px;
     font-weight: 700;
     cursor: pointer;
@@ -622,6 +578,12 @@ body {
     padding: 20px;
     border: 5px solid rgba(255,255,255,0.3);
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.details-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
 .details-header h2 {
@@ -902,26 +864,4 @@ body {
 .modal-content::-webkit-scrollbar-thumb {
     background: var(--gray-medium);
     border-radius: 4px;
-}
-
-/* ===================== ESTADOS DE CARGANDO ===================== */
-.loading {
-    position: relative;
-    overflow: hidden;
-}
-
-.loading::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
 }

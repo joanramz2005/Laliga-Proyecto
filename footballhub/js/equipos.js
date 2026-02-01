@@ -58,9 +58,7 @@ class TeamsManager {
         
         teams.forEach(team => {
             const teamName = team.querySelector('.team-name').textContent.toLowerCase();
-            const position = parseInt(team.dataset.position);
             const status = team.dataset.status;
-            const points = parseInt(team.dataset.points);
             
             let shouldShow = true;
             
@@ -73,13 +71,15 @@ class TeamsManager {
             if (shouldShow && this.currentFilter !== 'all') {
                 switch(this.currentFilter) {
                     case 'top6':
-                        shouldShow = position <= 6;
+                        // Para filtro Top 6, usar un array de equipos conocidos del Top 6
+                        const top6Teams = ['arsenal', 'manchester city', 'liverpool', 'aston villa', 'tottenham hotspur', 'chelsea'];
+                        shouldShow = top6Teams.includes(teamName);
                         break;
                     case 'mid-table':
-                        shouldShow = position > 6 && position <= 16;
+                        shouldShow = status === 'mid-table';
                         break;
                     case 'relegation':
-                        shouldShow = position >= 17;
+                        shouldShow = status === 'relegation';
                         break;
                     case 'europe':
                         shouldShow = status === 'champions-league' || status === 'europa';
@@ -98,52 +98,7 @@ class TeamsManager {
     
     setupModal() {
         const modal = document.getElementById('team-modal');
-        const modalBody = document.getElementById('modal-body');
         const closeBtn = document.querySelector('.modal-close');
-        
-        // Datos detallados de los equipos (podrías mover esto a HTML también)
-        const teamDetails = {
-            1: {
-                name: "Arsenal",
-                founded: 1886,
-                manager: "Mikel Arteta",
-                stadium: "Emirates Stadium",
-                capacity: "60,704",
-                city: "Londres",
-                wins: 26,
-                draws: 6,
-                losses: 6,
-                goalsFor: 88,
-                goalsAgainst: 43
-            },
-            2: {
-                name: "Manchester City",
-                founded: 1880,
-                manager: "Pep Guardiola",
-                stadium: "Etihad Stadium",
-                capacity: "53,400",
-                city: "Mánchester",
-                wins: 28,
-                draws: 7,
-                losses: 3,
-                goalsFor: 96,
-                goalsAgainst: 34
-            },
-            3: {
-                name: "Liverpool",
-                founded: 1892,
-                manager: "Jürgen Klopp",
-                stadium: "Anfield",
-                capacity: "61,015",
-                city: "Liverpool",
-                wins: 24,
-                draws: 10,
-                losses: 4,
-                goalsFor: 86,
-                goalsAgainst: 41
-            }
-            // Agrega los demás equipos aquí...
-        };
         
         // Abrir modal al hacer click en botón "Ver Detalles"
         document.addEventListener('click', (e) => {
@@ -191,25 +146,188 @@ class TeamsManager {
         const teamName = teamCard.querySelector('.team-name').textContent;
         const teamStadium = teamCard.querySelector('.team-stadium').textContent;
         const teamCity = teamCard.querySelector('.team-city').textContent;
-        const position = teamCard.dataset.position;
-        const points = teamCard.dataset.points;
+        const teamLogo = teamCard.querySelector('.team-logo').innerHTML;
+        const backgroundColor = teamCard.querySelector('.team-header').style.backgroundColor;
         
-        // Datos de ejemplo (en un proyecto real estos vendrían de una base de datos)
-        const teamInfo = {
-            founded: "1886",
-            manager: "Manager Ejemplo",
-            capacity: "60,000",
-            nickname: "The Gunners",
-            topScorer: "Bukayo Saka (16 goles)",
-            captain: "Martin Ødegaard"
+        // Datos específicos por equipo
+        const teamDetails = {
+            1: {
+                founded: "1886",
+                manager: "Mikel Arteta",
+                capacity: "60,704",
+                nickname: "The Gunners",
+                topScorer: "Bukayo Saka (18 goles)",
+                captain: "Martin Ødegaard"
+            },
+            2: {
+                founded: "1880",
+                manager: "Pep Guardiola",
+                capacity: "53,400",
+                nickname: "The Citizens",
+                topScorer: "Erling Haaland (24 goles)",
+                captain: "Kevin De Bruyne"
+            },
+            3: {
+                founded: "1892",
+                manager: "Arne Slot",
+                capacity: "61,015",
+                nickname: "The Reds",
+                topScorer: "Mohamed Salah (20 goles)",
+                captain: "Virgil van Dijk"
+            },
+            4: {
+                founded: "1874",
+                manager: "Unai Emery",
+                capacity: "42,785",
+                nickname: "The Villans",
+                topScorer: "Ollie Watkins (15 goles)",
+                captain: "John McGinn"
+            },
+            5: {
+                founded: "1882",
+                manager: "Ange Postecoglou",
+                capacity: "62,850",
+                nickname: "Spurs",
+                topScorer: "Son Heung-min (16 goles)",
+                captain: "Son Heung-min"
+            },
+            6: {
+                founded: "1905",
+                manager: "Enzo Maresca",
+                capacity: "40,343",
+                nickname: "The Blues",
+                topScorer: "Cole Palmer (14 goles)",
+                captain: "Reece James"
+            },
+            7: {
+                founded: "1892",
+                manager: "Eddie Howe",
+                capacity: "52,305",
+                nickname: "The Magpies",
+                topScorer: "Alexander Isak (12 goles)",
+                captain: "Jamaal Lascelles"
+            },
+            8: {
+                founded: "1878",
+                manager: "Erik ten Hag",
+                capacity: "74,310",
+                nickname: "The Red Devils",
+                topScorer: "Rasmus Højlund (13 goles)",
+                captain: "Bruno Fernandes"
+            },
+            9: {
+                founded: "1895",
+                manager: "Julen Lopetegui",
+                capacity: "62,500",
+                nickname: "The Hammers",
+                topScorer: "Jarrod Bowen (11 goles)",
+                captain: "Kurt Zouma"
+            },
+            10: {
+                founded: "1905",
+                manager: "Oliver Glasner",
+                capacity: "25,486",
+                nickname: "The Eagles",
+                topScorer: "Jean-Philippe Mateta (10 goles)",
+                captain: "Joachim Andersen"
+            },
+            11: {
+                founded: "1901",
+                manager: "Fabian Hürzeler",
+                capacity: "31,876",
+                nickname: "The Seagulls",
+                topScorer: "João Pedro (9 goles)",
+                captain: "Lewis Dunk"
+            },
+            12: {
+                founded: "1899",
+                manager: "Andoni Iraola",
+                capacity: "11,307",
+                nickname: "The Cherries",
+                topScorer: "Dominic Solanke (17 goles)",
+                captain: "Neto"
+            },
+            13: {
+                founded: "1879",
+                manager: "Marco Silva",
+                capacity: "24,500",
+                nickname: "The Cottagers",
+                topScorer: "Rodrigo Muniz (8 goles)",
+                captain: "Tom Cairney"
+            },
+            14: {
+                founded: "1877",
+                manager: "Gary O'Neil",
+                capacity: "31,750",
+                nickname: "Wolves",
+                topScorer: "Matheus Cunha (9 goles)",
+                captain: "Max Kilman"
+            },
+            15: {
+                founded: "1878",
+                manager: "Sean Dyche",
+                capacity: "39,414",
+                nickname: "The Toffees",
+                topScorer: "Dominic Calvert-Lewin (7 goles)",
+                captain: "Seamus Coleman"
+            },
+            16: {
+                founded: "1889",
+                manager: "Thomas Frank",
+                capacity: "17,250",
+                nickname: "The Bees",
+                topScorer: "Ivan Toney (11 goles)",
+                captain: "Christian Nørgaard"
+            },
+            17: {
+                founded: "1865",
+                manager: "Nuno Espírito Santo",
+                capacity: "30,332",
+                nickname: "The Reds",
+                topScorer: "Chris Wood (6 goles)",
+                captain: "Joe Worrall"
+            },
+            18: {
+                founded: "1885",
+                manager: "Rob Edwards",
+                capacity: "11,850",
+                nickname: "The Hatters",
+                topScorer: "Elijah Adebayo (5 goles)",
+                captain: "Tom Lockyer"
+            },
+            19: {
+                founded: "1882",
+                manager: "Vincent Kompany",
+                capacity: "21,944",
+                nickname: "The Clarets",
+                topScorer: "Lyle Foster (4 goles)",
+                captain: "Jack Cork"
+            },
+            20: {
+                founded: "1889",
+                manager: "Chris Wilder",
+                capacity: "32,050",
+                nickname: "The Blades",
+                topScorer: "Oliver McBurnie (3 goles)",
+                captain: "John Egan"
+            }
+        };
+        
+        const details = teamDetails[teamId] || {
+            founded: "1900",
+            manager: "Manager",
+            capacity: "40,000",
+            nickname: "Equipo",
+            topScorer: "Jugador (0 goles)",
+            captain: "Capitán"
         };
         
         // Contenido del modal
         modalBody.innerHTML = `
             <div class="team-details">
-                <div class="details-header" style="${teamCard.querySelector('.team-header').style.cssText}">
+                <div class="details-header" style="background: ${backgroundColor}">
                     <div class="details-logo">
-                        ${teamCard.querySelector('.team-logo').innerHTML}
+                        ${teamLogo}
                     </div>
                     <h2>${teamName}</h2>
                     <p>${teamStadium} • ${teamCity}</p>
@@ -217,44 +335,29 @@ class TeamsManager {
                 <div class="details-content">
                     <div class="details-grid">
                         <div class="detail-item">
-                            <span class="detail-label">Posición</span>
-                            <span class="detail-value">${position}°</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Puntos</span>
-                            <span class="detail-value">${points}</span>
-                        </div>
-                        <div class="detail-item">
                             <span class="detail-label">Fundación</span>
-                            <span class="detail-value">${teamInfo.founded}</span>
+                            <span class="detail-value">${details.founded}</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Entrenador</span>
-                            <span class="detail-value">${teamInfo.manager}</span>
+                            <span class="detail-value">${details.manager}</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Capacidad</span>
-                            <span class="detail-value">${teamInfo.capacity}</span>
+                            <span class="detail-value">${details.capacity}</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Apodo</span>
-                            <span class="detail-value">${teamInfo.nickname}</span>
+                            <span class="detail-value">${details.nickname}</span>
                         </div>
                     </div>
                     
                     <div class="player-highlight">
-                        <h3>Jugador Destacado</h3>
-                        <p>${teamInfo.topScorer}</p>
-                        <p><strong>Capitán:</strong> ${teamInfo.captain}</p>
+                        <h3>Estadísticas 2025/2026</h3>
+                        <p><strong>Máximo goleador:</strong> ${details.topScorer}</p>
+                        <p><strong>Capitán:</strong> ${details.captain}</p>
+                        <p><strong>Última actualización:</strong> 1 de febrero de 2026</p>
                     </div>
-                    
-                    <div class="modal-actions">
-                        <button class="btn primary" onclick="alert('Ver más información de ${teamName}')">
-                            Ver Plantilla Completa
-                        </button>
-                        <button class="btn secondary" onclick="alert('Ver próximos partidos de ${teamName}')">
-                            Ver Partidos
-                        </button>
                     </div>
                 </div>
             </div>
