@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - FootballHub</title>
+
+    <link rel="stylesheet" href="../index.css"> 
+    
+    <link rel="stylesheet" href="contacto.css">
+</head>
+<body class="contact-page">
+
+    <header class="header">
+        <div class="logo">
+            <img src="../logo.png" width="170px" height="65" alt="Logo">
+        </div>
+        <nav class="nav">
+            <a href="../index.html">Inicio</a>
+            <a href="equipos.html">Equipos</a>
+            <a href="tabla.html">Tabla</a>
+            <a href="partidos.html">Partidos</a>
+            <a href="contacto.html" class="active">Contacto</a>
+        </nav>
+    </header>
+
+    <main class="contact-wrapper">
+        <section class="contact-intro">
+            <h1>Contacto</h1>
+            <p>¿Tienes dudas o quieres unirte al equipo de FootballHub?</p>
+        </section>
+
+        <div class="contact-grid">
+            <aside class="info-column">
+                <article class="info-card">
+                    <div class="card-icon-circle">🆘</div>
+                    <h3>Centro de Ayuda</h3>
+                    <p>Soporte técnico y dudas sobre estadísticas.</p>
+                    <div class="contact-data">
+                        <p><strong>Teléfono:</strong> +34 900 123 456</p>
+                        <p><strong>Email:</strong> ayuda@footballhub.com</p>
+                    </div>
+                    <span class="badge">Respuesta en < 24h</span>
+                </article>
+
+                <article class="info-card work-highlight">
+                    <div class="card-icon-circle">💼</div>
+                    <h3>Trabaja con nosotros</h3>
+                    <p>¿Eres analista o redactor? Buscamos talento.</p>
+                    <a></a>
+                    <a href="mailto:trabajo@footballhub.com" class="btn primary">Enviar CV</a>
+                </article>
+            </aside>
+
+            <section class="form-column">
+                <form class="main-form">
+                    <div class="input-group">
+                        <label>Nombre Completo</label>
+                        <input type="text" placeholder="Ej. Juan Pérez" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Mensaje</label>
+                        <textarea rows="6" placeholder="¿En qué podemos ayudarte?"></textarea>
+                    </div>
+                    <button type="submit" class="btn primary full-width">Enviar Mensaje</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2026 FootballHub · Proyecto educativo</p>
+    </footer>
+
+</body>
+</html>

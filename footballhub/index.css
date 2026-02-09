@@ -475,4 +475,71 @@ body {
     .nav a {
         margin-left: 1rem;
     }
+
+/* ===================== AJUSTES DE CONTACTO ===================== */
+
+/* Contenedor principal para centrar todo */
+.contact-main {
+    padding-top: 120px; /* Espacio extra para que no lo tape el header */
+    padding-bottom: 50px;
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
 }
+
+/* El título y párrafo superior */
+.contact-hero {
+    text-align: center;
+    margin-bottom: 3rem;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+/* La rejilla que separa las tarjetas del formulario */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Una columna para tarjetas, otra más ancha para el form */
+    gap: 3rem; /* Espacio generoso entre los dos bloques principales */
+    max-width: 1200px; /* Ancho máximo para que no se estire demasiado en pantallas gigantes */
+    width: 90%; /* Ancho responsivo */
+    margin: 0 auto; /* Centrado absoluto */
+}
+
+/* Espaciado entre las tarjetas de la izquierda (Ayuda y Trabajo) */
+.contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Espacio entre la tarjeta de Ayuda y la de Trabajo */
+}
+
+/* Ajuste de las tarjetas para que ocupen todo su ancho disponible */
+.contact-sidebar .carousel-card {
+    width: 100%; 
+    margin: 0;
+}
+
+/* Estilo del formulario para que se vea más limpio */
+.contact-form-container {
+    background: var(--card-bg);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    height: fit-content; /* Para que no se estire más de lo necesario */
+}
+
+/* Responsivo: Si la pantalla es pequeña, se pone uno debajo de otro */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+}
+    
+}
+
