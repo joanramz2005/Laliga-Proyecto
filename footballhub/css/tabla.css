@@ -1,0 +1,285 @@
+
+:root {
+    --primary-color: #0b1c3d;     /* Azul Champions oscuro */
+    --secondary-color: #1e4fa1;   /* Azul más suave */
+    --accent-color: #f5c400;      /* Dorado Premier */
+    --background-color: #f4f6fb;
+    --card-bg: #ffffff;
+    --text-light: #ffffff;
+    --text-dark: #111111;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========== BASE ========== */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ========== LAYOUT ========== */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.main {
+    padding: 120px 0;
+}
+
+/* ========== HEADER (components) ========== */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2.5rem;
+    background: rgba(11, 28, 61, 0.9);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+.header.hide {
+    transform: translateY(-100%);
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a.active,
+.nav a:hover {
+    color: var(--accent-color);
+}
+
+
+/* ========== TABLA (pages.css) ========== */
+.table-header-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+}
+
+.table-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-light);
+    letter-spacing: -0.5px;
+}
+
+.competition-badge {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    background-color: var(--card-bg);
+    color: var(--text-dark);
+    border-left: 5px solid transparent;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.badge.champions {
+    border-left-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.badge.europa {
+    border-left-color: var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.badge.relegation {
+    border-left-color: #c41e3a;
+    color: #a51d2b;
+}
+
+/* tabla responsiva */
+.table-responsive {
+    overflow-x: auto;
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    padding: 4px;
+}
+
+.premier-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+    min-width: 1000px;
+}
+
+.premier-table th {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 18px 8px;
+    font-weight: 600;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.premier-table th:last-child {
+    border-right: none;
+}
+
+.premier-table td {
+    padding: 16px 8px;
+    text-align: center;
+    border-bottom: 1px solid #eef2f6;
+    vertical-align: middle;
+}
+
+/* alineaciones especiales */
+.premier-table td.club {
+    text-align: left;
+    font-weight: 600;
+}
+
+.club-name {
+    display: inline-block;
+    padding-left: 8px;
+    font-weight: 600;
+}
+
+/* diferencial de goles */
+.dg-positive {
+    color: #0a7b3c;
+    font-weight: 700;
+}
+
+.dg-negative {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+/* puntos destacados */
+.pts-cell {
+    font-weight: 800;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* filas con contexto europeo/descenso */
+.champions-row {
+    background-color: rgba(11, 90, 248, 0.03);
+    border-left: 6px solid var(--primary-color);
+}
+
+.europa-row {
+    background-color: rgba(30, 79, 161, 0.03);
+    border-left: 6px solid var(--secondary-color);
+}
+
+.relegation-row {
+    background-color: rgba(196, 30, 58, 0.03);
+    border-left: 6px solid #c41e3a;
+}
+
+/* form badge (últimos 5) */
+.form-cell {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.form-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+}
+
+.form-badge.win {
+    background-color: #1e7b4b;
+}
+
+.form-badge.draw {
+    background-color: #7f8c8d;
+}
+
+.form-badge.loss {
+    background-color: #b03a2e;
+}
+
+/* footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 28px 0;
+    margin-top: 48px;
+    font-size: 0.95rem;
+}
+
+/* hover en filas */
+.premier-table tbody tr:hover {
+    background-color: rgba(245, 196, 0, 0.06);
+    transition: background 0.2s;
+}
+
+/* responsive ajustes */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 16px;
+    }
+    .nav {
+        margin-top: 12px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .table-title {
+        font-size: 1.5rem;
+    }
+    .competition-badge {
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootballHub · Tabla Premier League</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="../css/tabla.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">
+            <img src="../logo.png" width="170px" height="65">
+        </div>
+        <nav class="nav">
+            <a href="../index.html" class="active">Inicio</a>
+            <a href="../pages/equipos.html">Equipos</a>
+            <a href="../pages/tabla.html">Tabla</a>
+            <a href="../pages/partidos.html">Partidos</a>
+            <a href="../pages/contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT - TABLA PREMIER LEAGUE -->
+    <main class="main">
+        <div class="container">
+            <div class="table-header-wrapper">
+                <h1 class="table-title">Premier League · Clasificación 2024/25</h1>
+                <div class="competition-badge">
+                    <span class="badge champions">Fase de grupos Champions</span>
+                    <span class="badge europa">Fase de grupos Europa League</span>
+                    <span class="badge relegation">Descenso</span>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table class="premier-table">
+                    <thead>
+                        <tr>
+                            <th class="rank">Rank</th>
+                            <th class="club">Club</th>
+                            <th class="pj">PJ</th>
+                            <th class="v">V</th>
+                            <th class="e">E</th>
+                            <th class="d">D</th>
+                            <th class="gf">GF</th>
+                            <th class="gc">GC</th>
+                            <th class="dg">DG</th>
+                            <th class="pts">Pts</th>
+                            <th class="ultimos5">Últimos 5</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 1. Arsenal - Champions -->
+                        <tr class="champions-row">
+                            <td class="rank">1</td>
+                            <td class="club"><span class="club-name">Arsenal</span></td>
+                            <td>25</td>
+                            <td>17</td>
+                            <td>5</td>
+                            <td>3</td>
+                            <td>49</td>
+                            <td>17</td>
+                            <td class="dg-positive">+32</td>
+                            <td class="pts-cell">56</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                            </td>
+                        </tr>
+                        <!-- 2. Manchester City - Champions -->
+                        <tr class="champions-row">
+                            <td class="rank">2</td>
+                            <td class="club"><span class="club-name">Manchester City</span></td>
+                            <td>25</td>
+                            <td>15</td>
+                            <td>5</td>
+                            <td>5</td>
+                            <td>51</td>
+                            <td>24</td>
+                            <td class="dg-positive">+27</td>
+                            <td class="pts-cell">50</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge win">V</span>
+                            </td>
+                        </tr>
+                        <!-- 3. Aston Villa - Champions -->
+                        <tr class="champions-row">
+                            <td class="rank">3</td>
+                            <td class="club"><span class="club-name">Aston Villa</span></td>
+                            <td>25</td>
+                            <td>14</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>36</td>
+                            <td>27</td>
+                            <td class="dg-positive">+9</td>
+                            <td class="pts-cell">47</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge draw">E</span>
+                            </td>
+                        </tr>
+                        <!-- 4. Manchester United - Champions -->
+                        <tr class="champions-row">
+                            <td class="rank">4</td>
+                            <td class="club"><span class="club-name">Manchester United</span></td>
+                            <td>26</td>
+                            <td>12</td>
+                            <td>9</td>
+                            <td>5</td>
+                            <td>47</td>
+                            <td>37</td>
+                            <td class="dg-positive">+10</td>
+                            <td class="pts-cell">45</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                            </td>
+                        </tr>
+                        <!-- 5. Chelsea - Europa League -->
+                        <tr class="europa-row">
+                            <td class="rank">5</td>
+                            <td class="club"><span class="club-name">Chelsea</span></td>
+                            <td>26</td>
+                            <td>12</td>
+                            <td>8</td>
+                            <td>6</td>
+                            <td>47</td>
+                            <td>30</td>
+                            <td class="dg-positive">+17</td>
+                            <td class="pts-cell">44</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                            </td>
+                        </tr>
+                        <!-- 6. Liverpool -->
+                        <tr>
+                            <td class="rank">6</td>
+                            <td class="club"><span class="club-name">Liverpool</span></td>
+                            <td>25</td>
+                            <td>11</td>
+                            <td>6</td>
+                            <td>8</td>
+                            <td>40</td>
+                            <td>35</td>
+                            <td class="dg-positive">+5</td>
+                            <td class="pts-cell">39</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 7. Brentford -->
+                        <tr>
+                            <td class="rank">7</td>
+                            <td class="club"><span class="club-name">Brentford</span></td>
+                            <td>25</td>
+                            <td>12</td>
+                            <td>3</td>
+                            <td>10</td>
+                            <td>39</td>
+                            <td>34</td>
+                            <td class="dg-positive">+5</td>
+                            <td class="pts-cell">39</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                            </td>
+                        </tr>
+                        <!-- 8. Everton -->
+                        <tr>
+                            <td class="rank">8</td>
+                            <td class="club"><span class="club-name">Everton</span></td>
+                            <td>26</td>
+                            <td>10</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>29</td>
+                            <td>30</td>
+                            <td class="dg-negative">-1</td>
+                            <td class="pts-cell">37</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 9. Bournemouth -->
+                        <tr>
+                            <td class="rank">9</td>
+                            <td class="club"><span class="club-name">Bournemouth</span></td>
+                            <td>26</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>7</td>
+                            <td>43</td>
+                            <td>45</td>
+                            <td class="dg-negative">-2</td>
+                            <td class="pts-cell">37</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge win">V</span>
+                            </td>
+                        </tr>
+                        <!-- 10. Newcastle -->
+                        <tr>
+                            <td class="rank">10</td>
+                            <td class="club"><span class="club-name">Newcastle</span></td>
+                            <td>26</td>
+                            <td>10</td>
+                            <td>6</td>
+                            <td>10</td>
+                            <td>37</td>
+                            <td>37</td>
+                            <td>0</td>
+                            <td class="pts-cell">36</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                            </td>
+                        </tr>
+                        <!-- 11. Sunderland AFC -->
+                        <tr>
+                            <td class="rank">11</td>
+                            <td class="club"><span class="club-name">Sunderland AFC</span></td>
+                            <td>25</td>
+                            <td>9</td>
+                            <td>9</td>
+                            <td>7</td>
+                            <td>27</td>
+                            <td>29</td>
+                            <td class="dg-negative">-2</td>
+                            <td class="pts-cell">36</td>
+                            <td class="form-cell">
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 12. Fulham -->
+                        <tr>
+                            <td class="rank">12</td>
+                            <td class="club"><span class="club-name">Fulham</span></td>
+                            <td>25</td>
+                            <td>10</td>
+                            <td>4</td>
+                            <td>11</td>
+                            <td>35</td>
+                            <td>37</td>
+                            <td class="dg-negative">-2</td>
+                            <td class="pts-cell">34</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 13. Crystal Palace -->
+                        <tr>
+                            <td class="rank">13</td>
+                            <td class="club"><span class="club-name">Crystal Palace</span></td>
+                            <td>25</td>
+                            <td>8</td>
+                            <td>8</td>
+                            <td>9</td>
+                            <td>26</td>
+                            <td>29</td>
+                            <td class="dg-negative">-3</td>
+                            <td class="pts-cell">32</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge win">V</span>
+                            </td>
+                        </tr>
+                        <!-- 14. Brighton -->
+                        <tr>
+                            <td class="rank">14</td>
+                            <td class="club"><span class="club-name">Brighton</span></td>
+                            <td>25</td>
+                            <td>7</td>
+                            <td>10</td>
+                            <td>8</td>
+                            <td>34</td>
+                            <td>33</td>
+                            <td class="dg-positive">+1</td>
+                            <td class="pts-cell">31</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 15. Leeds -->
+                        <tr>
+                            <td class="rank">15</td>
+                            <td class="club"><span class="club-name">Leeds</span></td>
+                            <td>26</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>10</td>
+                            <td>36</td>
+                            <td>45</td>
+                            <td class="dg-negative">-9</td>
+                            <td class="pts-cell">30</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                            </td>
+                        </tr>
+                        <!-- 16. Tottenham -->
+                        <tr>
+                            <td class="rank">16</td>
+                            <td class="club"><span class="club-name">Tottenham</span></td>
+                            <td>26</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td>11</td>
+                            <td>36</td>
+                            <td>37</td>
+                            <td class="dg-negative">-1</td>
+                            <td class="pts-cell">29</td>
+                            <td class="form-cell">
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 17. Nottingham Forest -->
+                        <tr>
+                            <td class="rank">17</td>
+                            <td class="club"><span class="club-name">Nottingham Forest</span></td>
+                            <td>25</td>
+                            <td>7</td>
+                            <td>5</td>
+                            <td>13</td>
+                            <td>25</td>
+                            <td>38</td>
+                            <td class="dg-negative">-13</td>
+                            <td class="pts-cell">26</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 18. West Ham - Descenso -->
+                        <tr class="relegation-row">
+                            <td class="rank">18</td>
+                            <td class="club"><span class="club-name">West Ham</span></td>
+                            <td>26</td>
+                            <td>6</td>
+                            <td>6</td>
+                            <td>14</td>
+                            <td>32</td>
+                            <td>49</td>
+                            <td class="dg-negative">-17</td>
+                            <td class="pts-cell">24</td>
+                            <td class="form-cell">
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge win">V</span>
+                                <span class="form-badge draw">E</span>
+                            </td>
+                        </tr>
+                        <!-- 19. Burnley - Descenso -->
+                        <tr class="relegation-row">
+                            <td class="rank">19</td>
+                            <td class="club"><span class="club-name">Burnley</span></td>
+                            <td>25</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>16</td>
+                            <td>25</td>
+                            <td>49</td>
+                            <td class="dg-negative">-24</td>
+                            <td class="pts-cell">15</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                        <!-- 20. Wolves - Descenso -->
+                        <tr class="relegation-row">
+                            <td class="rank">20</td>
+                            <td class="club"><span class="club-name">Wolves</span></td>
+                            <td>25</td>
+                            <td>1</td>
+                            <td>5</td>
+                            <td>19</td>
+                            <td>16</td>
+                            <td>48</td>
+                            <td class="dg-negative">-32</td>
+                            <td class="pts-cell">8</td>
+                            <td class="form-cell">
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge draw">E</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                                <span class="form-badge loss">D</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER (simple) -->
+    <footer class="footer">
+        <div class="container">
+            <p>⚽ FootballHub · Estadísticas Premier League · Datos actualizados</p>
+        </div>
+    </footer>
+
+        <script src="../index.js"></script>
+
+
+</body>
+
+</html>
