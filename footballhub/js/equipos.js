@@ -288,12 +288,12 @@ class TeamsManager {
                 captain: "Joe Worrall"
             },
             18: {
-                founded: "1885",
-                manager: "Rob Edwards",
-                capacity: "11,850",
-                nickname: "The Hatters",
-                topScorer: "Elijah Adebayo (5 goles)",
-                captain: "Tom Lockyer"
+                founded: "1879 ",
+                manager: "Régis Le Bris",
+                capacity: "49,000",
+                nickname: "The Black Cats",
+                topScorer: "Brian Brobbey (5 goles)",
+                captain: "Granit Xhaka"
             },
             19: {
                 founded: "1882",
@@ -304,12 +304,12 @@ class TeamsManager {
                 captain: "Jack Cork"
             },
             20: {
-                founded: "1889",
-                manager: "Chris Wilder",
-                capacity: "32,050",
-                nickname: "The Blades",
-                topScorer: "Oliver McBurnie (3 goles)",
-                captain: "John Egan"
+                founded: "1919",
+                manager: "Daniel Farke ",
+                capacity: "37,645 ",
+                nickname: "The Whites o The Peacocks",
+                topScorer: "Dominic Calvert-Lewin",
+                captain: "Ethan Ampadu"
             }
         };
         
