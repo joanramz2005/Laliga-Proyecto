@@ -67,7 +67,7 @@ body {
 
 /* ===================== HERO ===================== */
 .page-hero {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color));
     color: var(--text-light);
     padding: 140px 20px 60px;
     text-align: center;
@@ -83,7 +83,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="2"/></svg>') repeat;
     opacity: 0.1;
 }
 
