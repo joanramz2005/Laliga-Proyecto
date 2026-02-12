@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Partidos | FootballHub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS general -->
+    <link rel="stylesheet" href="../index.css">
+
+    <!-- CSS específico de partidos -->
+    <link rel="stylesheet" href="partidos.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">
+        <img src="../logo.png" width="170" height="65" alt="Logo">
+    </div>
+    <nav class="nav">
+        <a href="../index.html">Inicio</a>
+        <a href="equipos.html">Equipos</a>
+        <a href="tabla.html">Tabla</a>
+        <a href="partidos.html" class="active">Partidos</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+</header>
+
+<section class="page-hero">
+    <h1>Fixture Premier League</h1>
+    <p>Jornadas 1 - 5</p>
+</section>
+
+<!-- CONTENEDOR DONDE SE INSERTARÁN LOS PARTIDOS -->
+<section class="fixture-container" id="fixture"></section>
+
+<footer class="footer">
+    <p>© 2026 FootballHub · Proyecto educativo</p>
+</footer>
+
+<script>
+// URL del archivo JSON (ajustada a tu estructura de carpetas)
+// Ruta al archivo JSON (verifica que la carpeta 'data' esté un nivel arriba)
+const jsonPath = "../data/partidoss.json";
+
+fetch(jsonPath)
+  .then(response => response.json())
+  .then(data => {
+    const container = document.getElementById("fixture");
+    let ultimaJornada = null;
+
+    // DICCIONARIO DE ESCUDOS (Nombres de archivos de tu compañero)
+    const mapaEscudos = {
+      "Arsenal": "Arsenal_F.C.-Logo.wine.png",
+      "Manchester City": "Manchester_City_FC_badge.svg.png",
+      "Liverpool": "liverpool.png",
+      "Aston Villa": "aston.png",
+      "Tottenham": "tottenham.png",
+      "Chelsea": "Chelsea_FC.png",
+      "Newcastle": "newcastle-united-logo-1.png",
+      "Manchester United": "Manchester_United_FC.png",
+      "West Ham": "west-ham-united-logo.png",
+      "Crystal Palace": "crystal-palace-logo.png",
+      "Brighton": "Brighton_&_Hove_Albion_logo.svg.png",
+      "Bournemouth": "i.png",
+      "Fulham": "fulham-fc-shield-logo-transparent-background-football-club-icon-digital-download-free-png.png",
+      "Wolves": "Wolverhampton_Wanderers.svg.png",
+      "Everton": "everton-logo-escudo-1.png",
+      "Brentford": "brentford-fc-logo-transparent-background-football-club-icon-digital-download-free-png.png",
+      "Nottingham Forest": "nottingham-forest-fc-logo-png-transparent.png",
+      "Sunderland AFC": "sunderland-logo-transparent-background-football-club-icon-digital-download-free-png.png",
+      "Burnley": "burnley-fc-logo-0.png",
+      "Leeds": "Leeds-United-logo.png"
+    };
+
+    data.forEach(partido => {
+      // 1. CONTROL DE TÍTULOS DE JORNADA
+      if (partido.jornada !== ultimaJornada) {
+        const jornadaTitulo = document.createElement("h2");
+        jornadaTitulo.classList.add("jornada-title");
+        jornadaTitulo.textContent = `Jornada ${partido.jornada}`;
+        container.appendChild(jornadaTitulo);
+        ultimaJornada = partido.jornada;
+      }
+
+      // 2. OBTENER NOMBRES DE ARCHIVOS
+      const logoLocal = mapaEscudos[partido.local] || "default.png";
+      const logoVisitante = mapaEscudos[partido.visitante] || "default.png";
+
+      // 3. ESTILO DE ESCALADO DIRECTO (Para que el Arsenal se vea igual de grande)
+      // Usamos un pequeño margen para que no se pegue al texto al crecer
+      const estiloLocal = (partido.local === "Arsenal") ? 'style="transform: scale(1.7); margin-bottom: 5px;"' : "";
+      const estiloVisitante = (partido.visitante === "Arsenal") ? 'style="transform: scale(1.7); margin-bottom: 5px;"' : "";
+
+      // 4. CREACIÓN DE LA TARJETA
+      const partidoDiv = document.createElement("div");
+      partidoDiv.classList.add("match-card");
+
+      partidoDiv.innerHTML = `
+        <div class="team">
+          <span>${partido.local}</span>
+          <img src="img/${logoLocal}" alt="${partido.local}" ${estiloLocal}>
+        </div>
+
+        <div class="result">
+          ${partido.resultado}
+        </div>
+
+        <div class="team">
+          <img src="img/${logoVisitante}" alt="${partido.visitante}" ${estiloVisitante}>
+          <span>${partido.visitante}</span>
+        </div>
+      `;
+
+      container.appendChild(partidoDiv);
+    });
+  })
+  .catch(error => {
+    console.error("Error cargando partidos:", error);
+    document.getElementById("fixture").innerHTML = "<h2>Error al cargar los datos</h2>";
+  });
+</script>
+
+</body>
+</html>
