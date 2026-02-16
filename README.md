@@ -37,5 +37,4 @@ Para cumplir con los requisitos académicos, el proyecto incluye:
 ## ✒️ Autores
 * **Marín Favro Velo** - Desarrollador Principal / Lógica JS / Diseño HTML/CSS / Estructura
 * **Joan Ramirez** - Desarrollador Principal / Lógica JS / Diseño HTML/CSS / Estructura
-
 ---
