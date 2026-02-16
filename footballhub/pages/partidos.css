@@ -116,23 +116,23 @@
 }
 
 .jornada-title {
-    grid-column: 1 / -1; /* Esto hace que el título ocupe todo el ancho del grid */
+    grid-column: 1 / -1;
     margin-top: 3rem;
     margin-bottom: 1rem;
-    /* ... resto de tu código ... */
+    
 }
 
-/* Estilo general para que todos los logos se porten bien */
+
 .team img.logo-arsenal, 
 img[alt="Arsenal"],
 .team-logo img[alt="Arsenal"] {
-    transform: scale(1.8) !important; /* Subimos a 1.8 para que se note el cambio */
+    transform: scale(1.8) !important; 
     display: block !important;
 }
 
 /* Contenedor del logo para evitar que el escalado se corte */
 .team, .team-logo {
-    overflow: visible !important; /* Permite que el logo "crezca" fuera de su cuadro si es necesario */
+    overflow: visible !important; 
 }
 
 }
