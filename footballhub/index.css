@@ -86,7 +86,7 @@ body {
 
 .hero h1 {
     position: absolute;
-    top: 58%; /* un poco por debajo del centro */
+    top: 50%; /* un poco por debajo del centro */
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3.2rem;
