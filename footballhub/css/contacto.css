@@ -12,7 +12,9 @@
     background-color: var(--bg-light) !important;
     color: var(--primary-color);
 }
-
+.header {
+    background-color: var(--primary-color);
+}
 .contact-wrapper {
     max-width: 1200px;
     margin: 0 auto;

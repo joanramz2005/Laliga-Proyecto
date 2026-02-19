@@ -55,6 +55,11 @@ body {
 .nav a:hover {
     color: var(--accent-color);
 }
+.nav a.active,
+.nav a:hover {
+    color: var(--accent-color);
+}
+
 
 /* ===================== HERO ===================== */
 .hero {
