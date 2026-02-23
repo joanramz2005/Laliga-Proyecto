@@ -34,6 +34,51 @@ Para cumplir con los requisitos académicos, el proyecto incluye:
 - **Merges**: Mínimo 3 integraciones de ramas a la principal (`main`).
 - **Conflictos**: Resolución de conflictos durante el trabajo colaborativo documentada en el historial.
 
+## ⚠️ Conflicto de Fusión (Merge Conflict)
+
+Durante el desarrollo del proyecto se produjo un conflicto de fusión al trabajar simultáneamente en la misma rama (rama1).
+
+El conflicto ocurrió cuando ambos desarrolladores modificaron la misma sección del archivo:
+footballhub/pages/equipos.html
+
+Al ejecutar el comando:
+git pull
+Git intentó fusionar automáticamente los cambios, pero no pudo hacerlo porque existían modificaciones en las mismas líneas del archivo. El sistema mostró el siguiente mensaje:
+
+Auto-merging footballhub/pages/equipos.html
+CONFLICT (content): Merge conflict in footballhub/pages/equipos.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Esto significa que Git detectó cambios incompatibles y necesitaba intervención manual para resolver el conflicto.
+
+En el archivo afectado aparecieron las marcas de conflicto:
+
+<<<HEAD
+(código actual)
+=======
+(código entrante)
+>>> RAMA
+
+Donde:
+HEAD representa la versión local.
+======= separa ambas versiones.
+rama1 representa la versión entrante desde el repositorio remoto.
+
+## 🔧 Resolución ##
+Para solucionar el conflicto se siguieron los siguientes pasos:
+Revisar ambas versiones del código.
+Decidir qué cambios conservar.
+Eliminar las marcas de conflicto.
+Guardar el archivo corregido.
+Ejecutar:
+git add .
+git commit -m "Conflicto resuelto en equipos.html"
+
+Una vez realizado esto, el repositorio volvió a estar sincronizado correctamente.
+Este conflicto permitió reforzar el trabajo colaborativo y comprender mejor el funcionamiento interno de Git en entornos de desarrollo en equipo.
+
+##
+
 ## ✒️ Autores
 * **Marín Favro Velo** - Desarrollador Principal / Lógica JS / Diseño HTML/CSS / Estructura
 * **Joan Ramirez** - Desarrollador Principal / Lógica JS / Diseño HTML/CSS / Estructura
