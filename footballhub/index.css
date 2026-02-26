@@ -1,7 +1,7 @@
 :root {
-    --primary-color: #0b1c3d;     /* Azul Champions oscuro */
-    --secondary-color: #1e4fa1;   /* Azul más suave */
-    --accent-color: #f5c400;      /* Dorado Premier */
+    --primary-color: #0b1c3d;     
+    --secondary-color: #1e4fa1;  
+    --accent-color: #f5c400;      
     --background-color: #f4f6fb;
     --card-bg: #ffffff;
     --text-light: #ffffff;
@@ -64,7 +64,7 @@ body {
 /* ===================== HERO ===================== */
 .hero {
     height: 100vh;
-    background-image: url("fondo.jpg"); /* cambia la ruta */
+    background-image: url("fondo.jpg"); 
     background-size: cover;
     background-position: center;
     position: relative;
@@ -172,7 +172,6 @@ body {
 .card p {
     color: #555;
 }
-/* ===================== HIGHLIGHTS CAROUSEL ===================== */
 /* ===================== HIGHLIGHTS CAROUSEL ===================== */
 .highlights {
     padding: 4rem 2rem;
@@ -503,21 +502,19 @@ body {
 /* La rejilla que separa las tarjetas del formulario */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr; /* Una columna para tarjetas, otra más ancha para el form */
-    gap: 3rem; /* Espacio generoso entre los dos bloques principales */
-    max-width: 1200px; /* Ancho máximo para que no se estire demasiado en pantallas gigantes */
-    width: 90%; /* Ancho responsivo */
-    margin: 0 auto; /* Centrado absoluto */
+    grid-template-columns: 1fr 1.5fr; 
+    gap: 3rem; 
+    max-width: 1200px; 
+    width: 90%;
+    margin: 0 auto; 
 }
 
-/* Espaciado entre las tarjetas de la izquierda (Ayuda y Trabajo) */
 .contact-sidebar {
     display: flex;
     flex-direction: column;
-    gap: 2rem; /* Espacio entre la tarjeta de Ayuda y la de Trabajo */
+    gap: 2rem; 
 }
 
-/* Ajuste de las tarjetas para que ocupen todo su ancho disponible */
 .contact-sidebar .carousel-card {
     width: 100%; 
     margin: 0;
@@ -529,7 +526,7 @@ body {
     padding: 3rem;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    height: fit-content; /* Para que no se estire más de lo necesario */
+    height: fit-content; 
 }
 
 /* Responsivo: Si la pantalla es pequeña, se pone uno debajo de otro */
