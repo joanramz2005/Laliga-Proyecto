@@ -249,6 +249,7 @@ img {
 
 /* footer */
 .footer {
+    display: flex;
     background-color: var(--primary-color);
     color: var(--text-light);
     text-align: center;
